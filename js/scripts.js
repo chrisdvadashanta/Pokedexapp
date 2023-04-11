@@ -12,7 +12,7 @@ let pokemonList = [
     types:['psychic'],
 },
 {
-   name:'Chansey',
+    name:'Chansey',
     hight:1.1,
     weight:34.6,
     types:['normal'],
@@ -24,3 +24,13 @@ let pokemonList = [
     types:['electric'],
 },
 ];
+
+//Loop to display Pokemon and their hight
+for (let i=0 ; i < pokemonList.length ; i++ ){
+    if (pokemonList[i].hight > 1.6){
+        document.write( '<p>' + pokemonList[i].name+ ' : '+ '<p>'+ 'hight: ' + pokemonList[i].hight +' - ' +  'Wow, that\'s big!')
+    } 
+    else {
+        document.write('<p>' + pokemonList[i].name+ ' : ' + '<p>'+ 'hight: ' +  pokemonList[i].hight)
+    }
+}
