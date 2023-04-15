@@ -38,7 +38,9 @@ pokemonList.forEach(function (pokemonList) {
 let pokemonRepository = (function () {
     let pokemonList = []
     function add(pokemon) {
-        pokemonList.push(pokemon)
+        if (typeof !== '') {
+            pokemonList.push(pokemon)
+        }
     };
     function getall() {
         return pokemonList
