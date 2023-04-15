@@ -38,7 +38,7 @@ pokemonList.forEach(function (pokemonList) {
 let pokemonRepository = (function () {
     let pokemonList = []
     function add(pokemon) {
-        if (typeof !== '') {
+        if (typeof === "") {
             pokemonList.push(pokemon)
         }
     };
