@@ -1,3 +1,4 @@
+let pokemonRespository = (function () {
 let pokemonList = [
     {
         name: 'Charizard',
@@ -25,30 +26,29 @@ let pokemonList = [
     },
 ];
 
+function add(pokemon) {
+    if (typeof pokemon === "object") {
+        pokemonList.push(pokemon)
+    }
+};
+function getAll() {
+    return pokemonList
+};
+return {
+    add: add,
+    getAll: getAll,
+};
+
+})();
+
 //forEach to display Pokemon and their hight
-pokemonList.forEach(function (pokemonList) {
+pokemonRespository.getAll().forEach(function (pokemonList) {
     if (pokemonList.hight > 1.6) {
         document.write('<p>' + pokemonList.name + ' : ' + 'hight - ' + pokemonList.hight + ' - ' + 'Wow, that\'s big!')
     }
     else {
         document.write('<p>' + pokemonList.name + ' : ' + 'hight -' + pokemonList.hight)
     }
-})
+});
 
-let pokemonRepository = (function () {
-    let pokemonList = []
-    function add(pokemon) {
-        if (typeof === "  ") {
-            pokemonList.push(pokemon)
-        }
-    };
-    function getall() {
-        return pokemonList
-    };
-    return {
-        add: add,
-        getall: getall,
-    };
-
-})();
 
