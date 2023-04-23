@@ -60,7 +60,7 @@ body {
     padding: 50px;
     width: 250px;
 }
-.pokemonbutton {
+.button-class {
         border: none;
         display: inline-block;
         width: 200px;
