@@ -70,9 +70,9 @@ let pokemonRepository = (function () {
     pokemonWeight.innerText = 'Weight: ' + pokemon.weight;
 
     let pokemonType = document.createElement ('p');
-    pokemonType.innerText = 'Type: ' + pokemon.types[1].type['name'];
-
-    pokemon.types[0].type['name']
+    let arrayType = pokemon.types.map(obj => obj.type.name); 
+    let arrayTypeName = arrayType.join();
+    pokemonType.innerText = 'Type: ' + arrayTypeName;
 
     let pokemonImage = document.createElement ('img');
     pokemonImage.src = pokemon.imageUrl;
@@ -144,6 +144,7 @@ let pokemonRepository = (function () {
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
           item.types = details.types;
+          item.weight = details.weight;
         }).catch(function (e) {
           console.error(e);
         });
