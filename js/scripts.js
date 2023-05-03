@@ -31,7 +31,8 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add('btn');
     button.classList.add('btn-block');
-    button.setAttribute("data-target", "modal")
+    button.setAttribute("data-target", "#exampleModal")    
+    button.setAttribute("data-toogle", "modal")
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener("click", function () {
@@ -54,12 +55,11 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
 
-    modalTitle = $("<h1>" + pokemon.name + "</h1>")
+    modalName = $("<h1>" + pokemon.name + "</h1>")
     let image = $('<img class="modal-img" style="width:50%">');
     image.attr("src", pokemon.imageUrl);
     let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
     let pokemonWeight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
-    
     let arrayType = pokemon.types.map(obj => obj.type.name); 
     let arrayTypeName = arrayType.join();
     let pokemonType = $("<p>" + "Type: " + arrayTypeName + "</p>");
@@ -98,7 +98,7 @@ let pokemonRepository = (function () {
     // modalContainer.appendChild(modal);
     // modalContainer.classList.add('is-visible');
 
-    modalTitle.append(pokemon.name);
+    modalTitle.append(modalName);
     modalBody.append(pokemonHeight);
     modalBody.append(pokemonType);
     modalBody.append(pokemonWeight);
