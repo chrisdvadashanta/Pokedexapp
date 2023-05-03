@@ -29,8 +29,8 @@ let pokemonRepository = (function () {
     listpokemon.classList.add("list-group-item")
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("btn");
-    button.classList.add("data-target");
+    button.classList.add('btn');
+    button.classList.add('btn-block');
     button.setAttribute("data-target", "modal")
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
@@ -50,7 +50,7 @@ let pokemonRepository = (function () {
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $(".modal-header");
+    // let modalHeader = $(".modal-header");
     modalTitle.empty();
     modalBody.empty();
 
@@ -59,7 +59,10 @@ let pokemonRepository = (function () {
     image.attr("src", pokemon.imageUrl);
     let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
     let pokemonWeight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
-    let pokemonType = $("<p>" + "Type: " + pokemon.types + "</p>");
+    
+    let arrayType = pokemon.types.map(obj => obj.type.name); 
+    let arrayTypeName = arrayType.join();
+    let pokemonType = $("<p>" + "Type: " + arrayTypeName + "</p>");
 
     // modalContainer.innerHTML = '';
     // let modal = document.createElement('div');
