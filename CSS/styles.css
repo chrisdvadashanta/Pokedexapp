@@ -1,0 +1,9 @@
+.page-header__item {
+    padding: 3px;
+}
+body {
+    margin-top: 60px;
+}
+#search-button {
+    color: #d933ff;
+}
