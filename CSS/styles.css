@@ -1,9 +1,9 @@
-.page-header__item {
-    padding: 3px;
+.page-header__item{
+padding:3px;
 }
 body {
     margin-top: 60px;
 }
-#search-button {
-    color: #d933ff;
+.modal-header{
+    background-color:#33d9ff ;
 }
