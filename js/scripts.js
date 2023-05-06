@@ -32,8 +32,8 @@ let pokemonRepository = (function () {
     button.classList.add('btn');
     button.classList.add('btn-outline-primary');
     button.classList.add('btn-block');
-    button.setAttribute("type", "button")    
-    button.setAttribute("data-target", "#exampleModal")    
+    button.setAttribute("type", "button")
+    button.setAttribute("data-target", "#exampleModal")
     button.setAttribute("data-toggle", "modal")
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
@@ -60,7 +60,7 @@ let pokemonRepository = (function () {
     image.attr("src", pokemon.imageUrl);
     let pokemonHeight = $("<p>" + "Height: " + pokemon.height + "</p>");
     let pokemonWeight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
-    let arrayType = pokemon.types.map(obj => obj.type.name); 
+    let arrayType = pokemon.types.map(obj => obj.type.name);
     let arrayTypeName = arrayType.join();
     let pokemonType = $("<p>" + "Type: " + arrayTypeName + "</p>");
 
