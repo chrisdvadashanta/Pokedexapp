@@ -1,5 +1,5 @@
 # Pokedexapp #
-## Obejective ##
+## Objective ##
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
 1. its set up by fetching the data from 'https://pokeapi.co/api/v2/pokemon/?limit=150
